@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Home page</title>
+</head>
+
+<body>
+  <header class="page-header">
+    <div class="header-interactive">
+      <i class="app-logo">App logo</i>
+
+      <form class="search-form">
+        <input name="q" type="text" class="input-search-query" placeholder="enter keywords...">
+        <select class="select-category">
+          <option>Category 1</option>
+          <option>Category 2</option>
+          <option>Category 3</option>
+        </select>
+        <button class="search-button">
+          search icon
+        </button>
+      </form>
+
+      <div class="right-side-header">
+        <a href="#" class="user-circle">Bell Icon</a>
+        <a href="#" class="user-circle">U</a>
+      </div>
+    </div>
+
+    <div class="header-centered">
+      <nav class="nav-container">
+        <a class="nav-link">today products</a>
+        <hr>
+        <a class="nav-link">bestsellers</a>
+        <hr>
+        <a class="nav-link">trending</a>
+        <hr>
+        <a class="nav-link">discounts</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="carousel-container">manual carousel here</section>
+
+  <section class="product-section">
+    <h2>Recent products</h2>
+
+    <div class="product-container">
+
+      <div class="product-item">
+        <div class="product-image">image here</div>
+        <div class="product-description">description...</div>
+        <div class="product-infos">
+          <div class="product-details">
+            <span class="product-price">100.0$</span>
+            <span class="product-time-passed">1h ago</span>
+          </div>
+          <button class="product-buy">buy</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+<script>
+  const productContainer = document.querySelector(".product-container");
+  const productItem = document.querySelector(".product-item");
+  for (let i = 0; i < 10; i++){
+    productContainer.appendChild(productItem.cloneNode(true));
+  }
+</script>
+</html>
