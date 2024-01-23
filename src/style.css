@@ -1,0 +1,8 @@
+* {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.gradient-circle-right {
+  background: radial-gradient(circle at 95% 50%, #14001e, #36256c);
+}
