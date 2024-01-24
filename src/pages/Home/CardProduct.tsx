@@ -14,25 +14,27 @@ interface Props {
 
 const CardProduct = ({ item: { description } }: Props) => {
   return (
-    <Box>
-      <Box></Box>
-      <Box>
-        <span className="line-clamp-2 w-full">{description}</span>
-        <Box>
-          <span></span>
-          <Button>
-            <span>Buy</span>
+    <Box className="w-60 h-80 bg-gray-50 p-3 flex flex-col gap-1 rounded-2xl">
+      <Box  className="h-48 bg-gray-700 rounded-xl"></Box>
+        <Box className="flex flex-col gap-4">
+      <Box className="flex flex-row justify-between">
+        <Box className="flex flex-col">
+        <span className="text-xl font-bold">{description}</span>
+        <span className="text-xs text-gray-700">ID: 23432252</span>
+        </Box>
+        <span className="font-bold  text-red-600">$25.99</span>
+        </Box>
+          <Button className="hover:bg-sky-700 text-gray-50 bg-sky-100 py-2 rounded-md">
+            Buy
             <FaMoneyBill />
           </Button>
-          <Button>
-            <span>Add to chart</span>
+          <Button className="hover:bg-sky-700 text-gray-50 bg-sky-100 py-2 rounded-md">
+            Add to chart
             <CgShoppingCart />
           </Button>
-        </Box>
       </Box>
     </Box>
   );
 };
-
 export { type ItemData };
 export default CardProduct;
