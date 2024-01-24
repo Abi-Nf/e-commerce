@@ -14,7 +14,7 @@ const Home = () => {
           Our Products
         </Typography>
 
-        <Box className="flex justify-center flex-wrap gap-14">{Array(15).fill(<CardProduct item={{} as ItemData} />)}</Box>
+        <Box className="flex justify-center flex-wrap gap-14">{Array(10).fill(<CardProduct item={{} as ItemData} />)}</Box>
       </Box>
     </div>
   );

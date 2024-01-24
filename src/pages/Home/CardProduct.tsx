@@ -1,6 +1,6 @@
 import { Box, Button } from "@mui/material";
 import { CgShoppingCart } from "react-icons/cg";
-import { FaMoneyBill } from "react-icons/fa";
+import Form from "./Form";
 
 interface ItemData {
   date: Date;
@@ -24,14 +24,13 @@ const CardProduct = ({ item: { description } }: Props) => {
         </Box>
         <span className="font-bold  text-red-600">$25.99</span>
         </Box>
-          <Button className="hover:bg-sky-700 text-gray-50 bg-sky-100 py-2 rounded-md">
-            Buy
-            <FaMoneyBill />
-          </Button>
-          <Button className="hover:bg-sky-700 text-gray-50 bg-sky-100 py-2 rounded-md">
-            Add to chart
+        <Box className="gap-1 flex flex-row justify-between">
+        <Form/>
+          <Button color="info" variant="contained" className="hover:bg-sky-700 text-gray-50 rounded-md">
+            Add chart
             <CgShoppingCart />
           </Button>
+          </Box>
       </Box>
     </Box>
   );
